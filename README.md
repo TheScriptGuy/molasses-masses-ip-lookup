@@ -37,26 +37,28 @@ sudo apt install libssl-dev pkg-config
 ```bash
 ip_lookup --input <db_file> --ip <ip_address> [options]
 ```
+
 ## Required Arguments
 
-    `--input <db_file>`
-    Path to the .bin database file to search.
+`--input <db_file>`
+Path to the .bin database file to search.
 
-    `--ip <ip_address>`
-    The IPv4 or IPv6 address to check. The tool will determine if this IP is contained within the prefix trie embedded in the database.
+`--ip <ip_address>`
+The IPv4 or IPv6 address to check. The tool will determine if this IP is contained within the prefix trie embedded in the database.
 
 ## Optional Arguments
 
-    `--password <aes_key>`
-    If the database is encrypted, provide a decryption key (max 32 bytes). If this is omitted and encryption is required, the tool will fail.
+`--password <aes_key>`
+If the database is encrypted, provide a decryption key (max 32 bytes). If this is omitted and encryption is required, the tool will fail.
 
 ## Output
 
-    `True` if the IP address exists in the database
+`True` if the IP address exists in the database
 
-    `False` otherwise
+`False` otherwise
 
 ## Example
 
 ```bash
 ip_lookup --input embargo-v4.db --ip 192.0.2.1
+```
